@@ -12,12 +12,10 @@ class Eratosfen
     return [] if max_number < 2
     arr = (2..max_number).to_a
     i = arr.first
-    while i <= Math.sqrt(max_number) do
-      arr.reject!{|el| (el % i).zero? && el > i }
+    while i <= Math.sqrt(max_number)
+      arr.reject! { |el| (el % i).zero? && el > i }
       i += 1
     end
     arr
   end
-
-
 end
